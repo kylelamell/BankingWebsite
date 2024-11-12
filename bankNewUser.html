@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Kyle Lamell">
+        <meta name="description" content="This is the banking app user login">
+        <link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+        <title>Banking App Login Page</title>
+    </head>
+    <body>
+        <div>
+            <form enctype="mutipart/form-data" action="bankCreateUser.php" method="POST">
+                <label for="newUsername">Enter a username</label><br>
+                <input type="text" id="newusername" name="newUsername" value=""><br>
+
+                <p>New users must open a new account</p>
+                <label for="newAccountName">Enter the name for your new account</label><br>
+                <input type="text" id="newAccount" name="newAccountName" value=""><br>
+
+                <input type="radio" id="checking" name="newAccountType" value="checking" checked>
+                <label fir="checking">Checking</label><br>
+                <input type="radio" id="withdraw" name="newAccountType" value="savings">
+                <label for="savings">Savings</label><br>
+
+                <input type="submit" value="Create Account" />
+            </form>
+        </div>
+
+        <div>
+            <a href="bankLogin.html">Return to login</a><br>
+        </div>
+
+        <div class="errorMessage">
+            <p id="loginError"></p>
+        </div>
+        <script>
+            urlData = new URLSearchParams(window.location.search);
+            errorMessage = urlData.get('errorMessage');
+            document.getElementById('loginError').innerText = errorMessage || "";
+        </script>
+    </body>
+</html>

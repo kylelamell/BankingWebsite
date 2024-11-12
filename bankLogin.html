@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Kyle Lamell">
+        <meta name="description" content="This is the banking app user login">
+        <link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+        <title>Banking App Login Page</title>
+    </head>
+    <body>
+        <div>
+            <form enctype="mutipart/form-data" action="bankLogin.php" method="POST">
+                <label for="username">Enter your username</label><br>
+                <input type="text" id="username" name="username" value=""><br>
+
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+
+        <div>
+            <a href="bankNewUser.html">Create New User</a><br>
+        </div>
+
+        <div class="errorMessage">
+            <p id="loginError"></p>
+        </div>
+        <script>
+            urlData = new URLSearchParams(window.location.search);
+            errorMessage = urlData.get('errorMessage');
+            document.getElementById('loginError').innerText = errorMessage || "";
+        </script>
+
+        <div class="stateMessage">
+            <p id="loginMessage"></p>
+        </div>
+        <script>
+            urlData = new URLSearchParams(window.location.search);
+            stateMessage = urlData.get('stateMessage');
+            document.getElementById('loginMessage').innerText = stateMessage || "";
+        </script>
+    </body>
+</html>
