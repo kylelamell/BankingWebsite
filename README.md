@@ -1,4 +1,4 @@
-# CS 2300 Module 3 Open-Ended Project: Bank Accounts
+# Banking Website
 
 **Kyle Lamell**
 
