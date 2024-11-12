@@ -1,0 +1,17 @@
+Kyle
+3
+Kyle_Checking
+checking
+700
+Thu Oct 03 12:50:52 2024
+0
+Kyle_Savings
+savings
+270
+Thu Oct 03 12:50:52 2024
+0.05
+Kyle_Checking_2
+checking
+120
+Thu Oct 03 12:50:52 2024
+0

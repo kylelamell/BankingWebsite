@@ -1,0 +1,12 @@
+Bob
+2
+Bob_Checking
+checking
+2
+Thu Oct 03 12:50:52 2024
+0
+Bob_Savings
+Savings
+200
+Sun Oct 06 09:27:05 2024
+0.05
