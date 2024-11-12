@@ -18,7 +18,7 @@ input and receiving their outputs. The javascript functionality will just
 be scripts that extend the functionality of the html and php programs to 
 be more dynamic.
 
-\* the exception being bankWebpage.php.
+\* the exception being bankWebpage.php
 
 ## Text files
 I should mention before anything else that users information is stored 
