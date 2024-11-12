@@ -16,7 +16,8 @@ $temp_directory2 = "mytemp2";
 $command_mkdir = escapeshellcmd("mkdir " . $temp_directory2);
 $output_mkdir = shell_exec($command_mkdir);
 
-$command_cp_ga = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/getAccounts.cpp " . $temp_directory2);
+// TODO: Change <PATH_TO_getAccounts.cpp>
+$command_cp_ga = escapeshellcmd("cp <PATH_TO_getAccounts.cpp> " . $temp_directory2);
 $output_cp_ga = shell_exec($command_cp_ga);
 
 $output_ga = shell_exec("cd " . $temp_directory2 . ";g++ -std=c++1y -o getAccounts.exe getAccounts.cpp;./getAccounts.exe " . $username . ";cd ..");

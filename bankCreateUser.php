@@ -34,7 +34,8 @@
         $command_mkdir = escapeshellcmd("mkdir " . $temp_directory3);
         $output_mkdir = shell_exec($command_mkdir);
 
-        $command_cp_iu = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/isUser.cpp " . $temp_directory3);
+        // TODO: change <PATH_TO_isUser.cpp>
+        $command_cp_iu = escapeshellcmd("cp <PATH_TO_isUser.cpp> " . $temp_directory3);
         $output_cp_iu = shell_exec($command_cp_iu);
 
         $output_iu = shell_exec("cd " . $temp_directory3 . ";g++ -std=c++1y -o isUser.exe isUser.cpp;./isUser.exe " . $newUsername . ";cd ..");
@@ -51,7 +52,8 @@
             $command_mkfile = escapeshellcmd("cd users;echo " . $newUsername . " > " . $filename . ";echo '0' >> " . $filename . ";cd ..");
             $output_mkfile = shell_exec($command_mkfile);
 
-            $command_cp_cnu = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/createNewUser.cpp " . $temp_directory3);
+            // TODO: change PATH_TO_<createNewUser.cpp>
+            $command_cp_cnu = escapeshellcmd("cp PATH_TO_<createNewUser.cpp> " . $temp_directory3);
             $output_cp_cnu = shell_exec($command_cp_cnu);
 
             $output_cnu = shell_exec("cd " . $temp_directory3 . ";g++ -std=c++1y -o createNewUser.exe createNewUser.cpp;./createNewUser.exe " . $newUsername . " " . $newAccountName . " " . $newAccountType . ";cd ..");

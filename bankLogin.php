@@ -32,7 +32,8 @@
         $command_mkdir = escapeshellcmd("mkdir " . $temp_directory);
         $output_mkdir = shell_exec($command_mkdir);
 
-        $command_cp_iu = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/isUser.cpp " . $temp_directory);
+        // TODO: Change <PATH_TO_isUser.cpp>
+        $command_cp_iu = escapeshellcmd("cp <PATH_TO_isUser.cpp> " . $temp_directory);
         $output_cp_iu = shell_exec($command_cp_iu);
 
         $output_iu = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o isUser.exe isUser.cpp;./isUser.exe " . $username . ";cd ..");

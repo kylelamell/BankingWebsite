@@ -59,37 +59,43 @@
             $output_mkdir = shell_exec($command_mkdir);
 
             if ($userAction == "Deposit") {
-                $command_cp_d = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/deposit.cpp " . $temp_directory);
+                // TODO: Change <PATH_TO_deposit.cpp>
+                $command_cp_d = escapeshellcmd("cp <PATH_TO_deposit.cpp> " . $temp_directory);
                 $output_cp_d = shell_exec($command_cp_d);
                 $output_d = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o deposit.exe deposit.cpp;./deposit.exe " . $username . " " . $userAccount . " " . $userFunds . ";cd ..");
                 $outputData = explode(";", $output_d);
             }
             elseif ($userAction == "Withdraw") {
-                $command_cp_w = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/withdraw.cpp " . $temp_directory);
+                // TODO: Change <PATH_TO_withdraw.cpp>
+                $command_cp_w = escapeshellcmd("cp <PATH_TO_withdraw.cpp> " . $temp_directory);
                 $output_cp_w = shell_exec($command_cp_w);
                 $output_w = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o withdraw.exe withdraw.cpp;./withdraw.exe " . $username . " " . $userAccount . " " . $userFunds . ";cd ..");
                 $outputData = explode(";", $output_w);
             }
             elseif ($userAction == "Transfer") {
-                $command_cp_t = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/transfer.cpp " . $temp_directory);
+                // TODO: Change <PATH_TO_transfer.cpp>
+                $command_cp_t = escapeshellcmd("cp <PATH_TO_transfer.cpp> " . $temp_directory);
                 $output_cp_t = shell_exec($command_cp_t);
                 $output_t = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o transfer.exe transfer.cpp;./transfer.exe " . $username . " " . $userAccount . " " . $userFunds . " " . $userTransferAccount . ";cd ..");
                 $outputData = explode(";", $output_t);
             }
             elseif ($userAction == "WireTransfer") {
-                $command_cp_wt = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/wireTransfer.cpp " . $temp_directory);
+                // TODO: Change <PATH_TO_wireTransfer.cpp>
+                $command_cp_wt = escapeshellcmd("cp <PATH_TO_wireTransfer.cpp> " . $temp_directory);
                 $output_cp_wt = shell_exec($command_cp_wt);
                 $output_wt = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o wireTransfer.exe wireTransfer.cpp;./wireTransfer.exe " . $username . " " . $userAccount . " " . $userFunds . " " . $otherUsername . " " . $otherUserAccount . ";cd ..");
                 $outputData = explode(";", $output_wt);
             }
             elseif ($userAction == "CreateNewAccount") {
-                $command_cp_cna = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/createNewAccount.cpp " . $temp_directory);
+                // TODO: Change <PATH_TO_createNewAccount.cpp>
+                $command_cp_cna = escapeshellcmd("cp <PATH_TO_createNewAccount.cpp> " . $temp_directory);
                 $output_cp_cna = shell_exec($command_cp_cna);
                 $output_cna = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o createNewAccount.exe createNewAccount.cpp;./createNewAccount.exe " . $username . " " . $newAccountName . " " . $newAccountType . ";cd ..");
                 $outputData = explode(";", $output_cna);
             }
             elseif ($userAction == "DeleteAccount") {
-                $command_cp_da = escapeshellcmd("cp /users/k/l/klamell/www-root/cs2300/M3OEP/cpp/deleteAccount.cpp " . $temp_directory);
+                // TODO: Change <PATH_TO_deleteAccount.cpp>
+                $command_cp_da = escapeshellcmd("cp <PATH_TO_deleteAccount.cpp> " . $temp_directory);
                 $output_cp_da = shell_exec($command_cp_da);
                 $output_da = shell_exec("cd " . $temp_directory . ";g++ -std=c++1y -o deleteAccount.exe deleteAccount.cpp;./deleteAccount.exe " . $username . " " . $deleteAccountName . ";cd ..");
                 $outputData = explode(";", $output_da);

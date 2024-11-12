@@ -28,7 +28,8 @@ void eraseNewline(string &myString) {
 }
 
 void readAccountsFromFile(string &filename, vector<bankAccount> &bankAccounts) {
-    ifstream inFile("/users/k/l/klamell/www-root/cs2300/M3OEP/users/" + filename);
+    // TODO: Change <PATH_TO_users>
+    ifstream inFile("<PATH_TO_users>" + filename);
 
     string username;
     int numAccounts = 0;
@@ -78,7 +79,8 @@ void readAccountsFromFile(string &filename, vector<bankAccount> &bankAccounts) {
 }
 
 void writeAccountToFile(string &filename, string &username, vector<bankAccount> &bankAccounts) {
-    ofstream myFile("/users/k/l/klamell/www-root/cs2300/M3OEP/users/" + filename);
+    // TODO: Change <PATH_TO_users>
+    ofstream myFile("<PATH_TO_users>" + filename);
 
     myFile << username << "\n";
     myFile << bankAccounts.size() << "\n";

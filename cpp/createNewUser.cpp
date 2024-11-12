@@ -49,7 +49,8 @@ void readUsersFromFile(vector<string> &users) {
 }
 
 void writeUsersToFile(vector<string> &users) {
-    ofstream myFile("/users/k/l/klamell/www-root/cs2300/M3OEP/users/User.txt");
+    // TODO: Change PATH_TO_User.txt
+    ofstream myFile("<PATH_TO_User.txt>");
 
     myFile << users.size() << "\n";
 
@@ -60,7 +61,8 @@ void writeUsersToFile(vector<string> &users) {
 }
 
 void readAccountsFromFile(string &filename, vector<bankAccount> &bankAccounts) {
-    ifstream inFile("/users/k/l/klamell/www-root/cs2300/M3OEP/users/" + filename);
+    // TODO: Change <PATH_TO_users>
+    ifstream inFile("<PATH_TO_users>" + filename);
 
     string username;
     int numAccounts = 0;
@@ -110,7 +112,8 @@ void readAccountsFromFile(string &filename, vector<bankAccount> &bankAccounts) {
 }
 
 void writeAccountToFile(string &filename, string &username, vector<bankAccount> &bankAccounts) {
-    ofstream myFile("/users/k/l/klamell/www-root/cs2300/M3OEP/users/" + filename);
+    // TODO: Change <PATH_TO_users>
+    ofstream myFile("<PATH_TO_users>" + filename);
 
     myFile << username << "\n";
     myFile << bankAccounts.size() << "\n";

@@ -27,7 +27,8 @@ void eraseNewline(string &myString) {
 }
 
 void readUsersFromFile(vector<string> &users) {
-    ifstream inFile("/users/k/l/klamell/www-root/cs2300/M3OEP/users/User.txt");
+    // TODO: Change <PATH_TO_User.txt>
+    ifstream inFile("<PATH_TO_User.txt>" + filename);
 
     string username;
     int numAccounts;
