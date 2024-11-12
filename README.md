@@ -31,6 +31,7 @@ that a specific username exists.
 - User_\<username\>.txt holds a users account information including number 
 of account, account names, account types, account balances, account 
 creation dates, and interest rates.
+- currently there are three testing users
 
 ## C++
 I am choosing to keep the majority of the program in c++ so that I can utilise the 
